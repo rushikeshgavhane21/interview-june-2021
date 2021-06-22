@@ -1,9 +1,25 @@
-package exam;
 
-public class ConvertToBinary {
+import java.io.*;
 
-  public String toBinary(final int n) {
-    //TODO write your code here to achieve the desired result as explained in Readme file for this problem.
-    return "";
-  }
+class ConvertToBinary {
+	 public static String toBinary( int n)
+	{
+		int[] binary = new int[32];
+		int i = 0;
+		while (n > 0) {
+			binary[i] = n % 2;
+			n = n / 2;
+			i++;
+		}
+		for (int j = i - 1; j >= 0; j--)
+			System.out.print(binary[j]);
+       return "";
+	}
+
+	public static void main(String[] args)
+	{
+		int n = 22;
+		toBinary(n);
+	}
 }
+
